@@ -2,7 +2,6 @@
 <html>
 <head>
     <style>
-        /* Alleen een stijlklasse, maar nog niet toegepast */
         .achtergrond {
             background-color: green;
             width: 100px;
@@ -24,28 +23,33 @@
         const box = document.getElementById("zeghoi");
         box.style.display = "block";
         box.innerHTML = "hoi mensen";
+        box.classList.add("achtergrond"); // <- voeg de stijl toe
     }
 
     const box = document.getElementById("zeghoi");
     let isDragging = false;
     let offsetX, offsetY;
 
-    box.addEventListener("mousedown", function(e){
-        isDragging = true
+    box.addEventListener("mousedown", function(e) {
+        isDragging = true;
         offsetX = e.clientX - box.offsetLeft;
         offsetY = e.clientY - box.offsetTop;
-        box.style.cursor = ("grabbing");
-
+        box.style.cursor = "grabbing";
     });
 
-    document.addEventListener("mousemove",function(e) {
+    document.addEventListener("mousemove", function(e) {
         if (isDragging) {
-            box.style.left
+            box.style.left = (e.clientX - offsetX) + "px";
+            box.style.top = (e.clientY - offsetY) + "px";
         }
-    }
-)
+    });
 
+    document.addEventListener("mouseup", function() {
+        isDragging = false;
+        box.style.cursor = "grab";
+    });
 </script>
 
 </body>
 </html>
+
