@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Voorbeeld</title>
+    <style>
+        /* Alleen een stijlklasse, maar nog niet toegepast */
+        .achtergrond {
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            cursor: grab;
+            user-select: none;
+        }
+    </style>
 </head>
 <body>
 
+<button onclick="toonVlak()">Test</button>
 
-    <style>
+<h1 id="zeghoi" style="display: none;"></h1>
 
-        #zeghoi{
-            background-color: green;
-            
-        }
-
-    </style>
-    
-
-    <button onclick="zeghoi()">test</button>
-
-    <h1 id="zeghoi"></h1>
-
-
-    <script>
-        function  zeghoi() {
-        document.getElementById("zeghoi").innerText ="hoi mensen"; 
+<script>
+    function toonVlak() {
+        const box = document.getElementById("zeghoi");
+        box.style.display = "block";
+        box.innerHTML = "hoi mensen";
     }
-    </script>
+
+    const box = document.getElementById("zeghoi");
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    box.addEventListener("mousedown", function(e){
+        isDragging = true
+        offsetX = e.clientX - box.offsetLeft;
+        offsetY = e.clientY - box.offsetTop;
+        box.style.cursor = ("grabbing");
+
+    });
+
+    document.addEventListener("mousemove",function(e) {
+        if (isDragging) {
+            box.style.left
+        }
+    }
+)
+
+</script>
 
 </body>
 </html>
