@@ -1,57 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        .achtergrond {
-            background-color: gray; 
-            width: 100px;
-            height: 100px;
-            position: absolute;
-            cursor: grab;
-            user-select: none;
-            opacity: 0.6;
-        }
-    </style>
+  <style>
+.achtergrond {
+    background-color: rgba(128, 128, 128, 0.6); /* Grijs met 60% dekking */
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    cursor: grab;
+    user-select: none;
+    border: solid black;
+}
+
+
+    .close-btn {
+      position: absolute;
+      top: 2px;
+      left: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+#Batman {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  </style>
 </head>
 <body>
 
 <button onclick="toonVlak()">Test</button>
 
-<h1 id="zeghoi" style="display: none;"></h1>
+<h1 id="zeghoi" style="display: none; position: relative;">
+  <span class="close-btn" onclick="verbergVlak()">×</span>
+</h1>
 
 <script>
-    function toonVlak() {
-        const box = document.getElementById("zeghoi");
-        box.style.display = "block";
-        box.innerHTML = "hoi mensen";
-        box.classList.add("achtergrond");
-    }
-
+  function toonVlak() {
     const box = document.getElementById("zeghoi");
-    let isDragging = false;
-    let offsetX, offsetY;
+    box.style.display = "block";
+    box.innerHTML = '<span class="close-btn" onclick="verbergVlak()">×</span>hoi mensen';
+    box.classList.add("achtergrond");
+  }
 
-    box.addEventListener("mousedown", function(e) {
-        isDragging = true;
-        offsetX = e.clientX - box.offsetLeft;
-        offsetY = e.clientY - box.offsetTop;
-        box.style.cursor = "grabbing";
-    });
+  function verbergVlak() {
+    document.getElementById("zeghoi").style.display = "none";
+  }
 
-    document.addEventListener("mousemove", function(e) {
-        if (isDragging) {
-            box.style.left = (e.clientX - offsetX) + "px";
-            box.style.top = (e.clientY - offsetY) + "px";
-        }
-    });
+  const box = document.getElementById("zeghoi");
+  let isDragging = false;
+  let offsetX, offsetY;
 
-    document.addEventListener("mouseup", function() {
-        isDragging = false;
-        box.style.cursor = "grab";
-    });
+  box.addEventListener("mousedown", function(e) {
+    // voorkom slepen op het kruisje zelf
+    if (e.target.classList.contains("close-btn")) return;
+
+    isDragging = true;
+    offsetX = e.clientX - box.offsetLeft;
+    offsetY = e.clientY - box.offsetTop;
+    box.style.cursor = "grabbing";
+  });
+
+  document.addEventListener("mousemove", function(e) {
+    if (isDragging) {
+      box.style.left = (e.clientX - offsetX) + "px";
+      box.style.top = (e.clientY - offsetY) + "px";
+    }
+  });
+
+  document.addEventListener("mouseup", function() {
+    isDragging = false;
+    box.style.cursor = "grab";
+  });
 </script>
 
-<h1>test test test</h1>
+<img id="Batman" src="./Batman.png" alt="" srcset="">
+
 
 </body>
 </html>
