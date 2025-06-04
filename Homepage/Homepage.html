@@ -1,94 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-
-    body{
-      background-color: #0F0F0F;
-    }
-
-.achtergrond {
-    background-color: rgba(128, 128, 128, 0.6); 
-    width: 800px;
-    height: 600px;
-    position: absolute;
-    cursor: grab;
-    user-select: none;
-    border: solid rgb(148, 73, 73) 2px;
-    text-align: center;
-    color: white;
-}
-
-
-    .close-btn {
-      position: absolute;
-      top: 2px;
-      left: 780px;
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-      z-index: 10;
-    }
-
-#Batman {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-  </style>
+  <link rel="stylesheet" href="Homepage.css">
+  <script defer src="./Homepage.js"></script>
 </head>
 <body>
 
-<button onclick="toonVlak()">Test</button>
+  <h1 id="Balk"></h1>
+
+<button id="button" onclick="toonVlak()">W</button>
+
+<button style="margin-left: 10px;" id="button" onclick="niks()">L</button>
+
+<button style="margin-left: 10px;" id="button" onclick="niks()">L</button>
+
+</button>
+<br>
 
 <h1 id="zeghoi" style="display: none; position: relative;">
   <span class="close-btn" onclick="verbergVlak()">×</span>
 </h1>
 
-<script>
-  function toonVlak() {
-    const box = document.getElementById("zeghoi");
-    box.style.display = "block";
-    box.innerHTML = '<span class="close-btn" onclick="verbergVlak()">×</span>Case File 0001_2010.02.20_01';
-    box.classList.add("achtergrond");
-  }
 
-  function verbergVlak() {
-    document.getElementById("zeghoi").style.display = "none";
-  }
 
-  const box = document.getElementById("zeghoi");
-  let isDragging = false;
-  let offsetX, offsetY;
-
-  box.addEventListener("mousedown", function(e) {
-    // voorkom slepen op het kruisje zelf
-    if (e.target.classList.contains("close-btn")) return;
-
-    isDragging = true;
-    offsetX = e.clientX - box.offsetLeft;
-    offsetY = e.clientY - box.offsetTop;
-    box.style.cursor = "grabbing";
-  });
-
-  document.addEventListener("mousemove", function(e) {
-    if (isDragging) {
-      box.style.left = (e.clientX - offsetX) + "px";
-      box.style.top = (e.clientY - offsetY) + "px";
-    }
-  });
-
-  document.addEventListener("mouseup", function() {
-    isDragging = false;
-    box.style.cursor = "grab";
-  });
-
-</script>
 
 </body>
 </html>
