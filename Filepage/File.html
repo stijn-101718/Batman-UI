@@ -1,49 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case File Viewer</title>
+<link rel="stylesheet" href="File.css">
 </head>
 <body>
-    <div class="main-class">
-        <div class="search-class">
-            
+<div class="grid-bg">
+    <button class="nav-button" onclick="nextFile()">Next File</button>
+    <div class="header">Case File 0001_2010.02.20_01</div>
 
-        </div>
-        <div class="reports-class">
-            <div class="report-item">
-                <h2>Report 1</h2>
-                <p>Description of report 1.</p>
-            </div>
-            <div class="report-item">
-                <h2>Report 2</h2>
-                <p>Description of report 2.</p>
-            </div>
-            <div class="report-item">
-                <h2>Report 3</h2>
-                <p>Description of report 3.</p>
-            </div>
-            <div class="report-item">
-                <h2>Report 4</h2>
-                <p>Description of report 4.</p>
-
-        </div>
-        <div class="evidence-class">
-            <div class="evidence-item">
-                <h2>Evidence 1</h2>
-                <p>Description of evidence 1.</p>
-            </div>
-            <div class="evidence-item">
-                <h2>Evidence 2</h2>
-                <p>Description of evidence 2.</p>
-            </div>
-            <div class="evidence-item">
-                <h2>Evidence 3</h2>
-                <p>Description of evidence 3.</p>
-            </div>
-
-        </div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search..." oninput="searchFiles()">
     </div>
+
+    <div class="content-area">
+      <div class="text-boxes">
+        <div class="text-box">Text text text text<br>Text text text text<br>Text text text text</div>
+        <div class="text-box">Text text text text<br>Text text text text<br>Text text text text</div>
+        <div class="text-box">Text text text text<br>Text text text text<br>Text text text text</div>
+        <div class="text-box">Text text text text<br>Text text text text<br>Text text text text</div>
+      </div>
+
+      <div class="case-file" id="caseFile">
+        <!-- Thumbnails -->
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="A7" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="C5" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="M4" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="D12" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="C9" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="T11" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="F3" class="thumbnail"></div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="File.js"></script>
 </body>
 </html>
