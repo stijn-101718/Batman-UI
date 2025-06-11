@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case File Viewer</title>
+<link rel="stylesheet" href="File.css">
+</head>
+<body>
+<div class="grid-bg">
+    <button class="nav-button">Home</button>
+    <div class="header">Files</div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search..." oninput="searchFiles()">
+    </div>
+
+    <div class="content-area">
+      <div class="text-boxes">
+        <div class="text-box visible">Text Block 1<br>More details here<br>Even more info</div>
+        <div class="text-box hidden">Text Block 2<br>New information<br>Additional details</div>
+        <div class="text-box hidden">Text Block 3<br>Surveillance log<br>Commentary</div>
+        <div class="text-box hidden">Text Block 4<br>Important notes<br>Classified data</div>
+      </div>
+      
+
+      <div class="case-file" id="caseFile">
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="A" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="B" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="C" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="D" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="E" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="F" class="thumbnail"></div>
+        <div class="file-box"><img src="a78dddce-ee4b-4603-b5d2-595b031b8c99.png" alt="G" class="thumbnail"></div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="File.js"></script>
+</body>
+</html>
