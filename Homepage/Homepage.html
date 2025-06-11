@@ -4,13 +4,13 @@
     <style>
         .achtergrond {
             background-color: gray; 
-            width: 100px;
-            height: 100px;
+            width: auto;
+            height: auto;
             position: absolute;
             cursor: grab;
             user-select: none;
             opacity: 0.6;
-            border: solid 2px black;
+            border: solid 10px black;
         }
     </style>
 </head>
@@ -24,7 +24,7 @@
     function toonVlak() {
         const box = document.getElementById("zeghoi");
         box.style.display = "block";
-        box.innerHTML = "<iframe width='896' height='504' src='https://www.youtube.com/embed/SIkONw5OxFg' title='Gordon Ramsay Struggles To Eat A Giant Burger | FULL EP | Kitchen Nightmares' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>";
+        box.innerHTML = "<iframe src='https://101727.stu.sd-lab.nl/mijnwebsite/html/home.html?classId=bb9b8dc6-1952-43bf-9b9b-1724bfd54da2&assignmentId=7260e4da-8184-419e-9c14-ff7d233c944d&submissionId=8dd2aeac-6e5b-26a3-bd60-c8796e448886' width='800' height='600' frameborder='0' allowfullscreen></iframe>";
         box.classList.add("achtergrond");
     }
 
