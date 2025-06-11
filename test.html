@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Case File 0001</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: black;
+      color: red;
+    }
+
+    .grid-bg {
+      background-image: linear-gradient(to right, #333 1px, transparent 1px),
+                        linear-gradient(to bottom, #333 1px, transparent 1px);
+      background-size: 60px 60px;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .header {
+      font-size: 2em;
+      color: #cc0000;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      border: 2px solid red;
+      width: fit-content;
+    }
+
+    .top-buttons {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .top-buttons div {
+      width: 40px;
+      height: 40px;
+      background: #922;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid red;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    .main-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .text-column {
+      flex: 1 1 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .box {
+      border: 2px solid red;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      color: white;
+      height: 100px;
+    }
+
+    .image-grid {
+      flex: 3 1 600px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .image-box {
+      border: 2px solid red;
+      background-color: #111;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1 / 1;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        font-size: 1.4em;
+      }
+
+      .box {
+        font-size: 0.9em;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-layout {
+        flex-direction: column;
+      }
+
+      .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg">
+    <div class="top-buttons">
+      <div>⬇</div>
+      <div>🦇</div>
+    </div>
+
+    <div class="header">Case File 0001_2010.02.20_01</div>
+
+    <div class="main-layout">
+      <!-- Left text column -->
+      <div class="text-column">
+        <div class="box">Text text text text<br>Text text text text</div>
+        <div class="box">Text text text text<br>Text text text text</div>
+        <div class="box">Text text text text<br>Text text text text</div>
+        <div class="box">Text text text text<br>Text text text text</div>
+      </div>
+
+      <!-- Right image grid -->
+      <div class="image-grid">
+        <div class="image-box"><img src="img1.jpg" alt="A7"></div>
+        <div class="image-box"><img src="img2.jpg" alt="C5"></div>
+        <div class="image-box"><img src="img3.jpg" alt="M4"></div>
+        <div class="image-box"><img src="img4.jpg" alt="D12"></div>
+        <div class="image-box"><img src="img5.jpg" alt="C9"></div>
+        <div class="image-box"><img src="img6.jpg" alt="T11"></div>
+        <div class="image-box"><img src="img7.jpg" alt="F3"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
