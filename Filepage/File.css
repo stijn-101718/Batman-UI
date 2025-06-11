@@ -44,6 +44,9 @@
     .text-boxes {
       display: grid;
       gap: 10px;
+      position: relative;
+      height: 500px;
+      overflow: hidden;
     }
 
     .text-box {
@@ -51,6 +54,19 @@
       padding: 10px;
       background-color: rgba(0, 0, 0, 0.8);
       color: #999;
+      position: absolute;
+      width: 100%;
+      transition: transform 1s ease, opacity 1s ease;
+    }
+
+    .text-box.hidden {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+
+    .text-box.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .case-file {
