@@ -3,26 +3,67 @@
 <head>
   <link rel="stylesheet" href="Homepage.css">
   <script defer src="./Homepage.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background-color: #1C1C1C;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #Batmani {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .ball {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #8B1A1A;
+      border-radius: 50%;
+      box-shadow: 0 0 10px 1px #5a1818, 0 0 20px 1px #8B1A1A;
+    }
+
+    .ball1 { top: 31%; left: 38%; }
+    .ball2 { top: 35%; left: 66%; }
+    .ball3 { top: 35%; left: 33%; }
+    .ball4 { top: 31%; left: 61%; }
+    .ball5 { top: 70%; left: 31%; }
+  </style>
 </head>
 <body>
 
   <h1 id="Balk"></h1>
 
-<button id="button" onclick="toonVlak()">W</button>
+  <button id="button" onclick="toonVlak()">W</button>
 
-<button style="margin-left: 10px;" id="button" onclick="niks()">L</button>
+  <a href="andere_pagina.html">
+    <button style="margin-left: 10px;" id="button">L</button>
+  </a>
 
-<button style="margin-left: 10px;" id="button" onclick="niks()">L</button>
+  <a href="andere_pagina.html">
+    <button style="margin-left: 10px;" id="button">L</button>
+  </a>
 
-</button>
-<br>
+  <br>
 
-<h1 id="zeghoi" style="display: none; position: relative;">
-  <span class="close-btn" onclick="verbergVlak()">×</span>
-</h1>
+  <h1 id="zeghoi" style="display: none; position: relative;">
+    <span class="close-btn" onclick="verbergVlak()">×</span>
+  </h1>
 
+  <div>
+    <img id="Batmani" src="./Batman.png" alt="">
+  </div>
 
-
+  <div class="ball ball1"></div>
+  <div class="ball ball2"></div>
+  <div class="ball ball3"></div>
+  <div class="ball ball4"></div>
+  <div class="ball ball5"></div>
 
 </body>
 </html>

@@ -23,6 +23,7 @@
     border: solid #D32F2F;
     text-align: center;
     color: white;
+    z-index: 1000;
 }
 
 
@@ -47,3 +48,4 @@
       color: white;
 
     }
+
