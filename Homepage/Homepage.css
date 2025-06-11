@@ -2,6 +2,7 @@
       background-color: #0F0F0F;
     }
 
+        /* Nav bar */
 
     #Balk{
       width: 100%;
@@ -48,4 +49,49 @@
       color: white;
 
     }
+
+    /* background Bat */
+
+        #Batmani {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .ball {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #8B1A1A;
+      border-radius: 50%;
+      box-shadow: 0 0 10px 1px #5a1818, 0 0 20px 1px #8B1A1A;
+    }
+
+    .ball1 { top: 31%; left: 38%; }
+    .ball2 { top: 35%; left: 66%; }
+    .ball3 { top: 35%; left: 33%; }
+    .ball4 { top: 31%; left: 61%; }
+    .ball5 { top: 40%; left: 29%; }
+    .ball6 { top: 50%; left: 26%; }
+    .ball7 { top: 42%; left: 71%; }
+    .ball8 { top: 66%; left: 49.4%; }
+    .ball9 { top: 40%; left: 39%; }
+    .ball10 { top: 50%; left: 72.5%; }
+    .ball11 { top: 50%; left: 67.5%; }
+    .ball12 { top: 50%; left: 33%; }
+    .ball13 { top: 58%; left: 45%; }
+    .ball14 { top: 57%; left: 61.5%; }
+    .ball15 { top: 57%; left: 37.5%; }
+    .ball16 { top: 58%; left: 54%; }
+    .ball17 { top: 43%; left: 46.5%; }
+    .ball18 { top: 43%; left: 52.5%; }
+    .ball20 { top: 41%; left: 59%; }
+    .ball21 { top: 36%; left: 47.5%; }
+    .ball22 { top: 36%; left: 51.5%; }
+    .ball23 { top: 40%; left: 49.5%; }
+
+
+
 
