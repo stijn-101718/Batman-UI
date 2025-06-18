@@ -1,9 +1,30 @@
   /* Folder */
-  
   function toonVlak() {
     const box = document.getElementById("zeghoi");
     box.style.display = "block";
-    box.innerHTML = '<span class="close-btn" onclick="verbergVlak()">×</span>Case File 0001_2010.02.20_01';
+    box.innerHTML = `
+      <span class="close-btn" onclick="verbergVlak()">×</span>
+      <div id="extraText">
+      <h3>incident_log_2306.txt</h3>
+      <p>      [LOG ID: 2306-GCE] <br>
+      Date: 18-06-2025 <br>
+Location: Gotham City - East End <br>
+Time: 22:17:45<p>
+      </div>
+
+
+      <div id="extraText2">
+      <p>Summary: <br>
+      Unregistered activity detected near ACE Chemicals. <br>
+      Thermal signatures indicate 3+ individuals. <br>
+      Facial match (63%) - possible ID: HARLEY QUINN <br>
+
+
+
+
+
+      </p>
+    `;
     box.classList.add("achtergrond");
   }
 
