@@ -1,5 +1,6 @@
     body{
       background-color: #0F0F0F;
+      font-family: 'Roboto Condensed', Arial, sans-serif;
     }
 
         /* Nav bar */
@@ -94,4 +95,22 @@
 
 
 
+/* mark */
 
+
+#Title{
+  color: #D32F2F;
+  font-size: 20px;
+  position: fixed;
+  bottom: 0px;
+}
+
+
+#dateDisplay {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  text-align: right;
+  color: #D32F2F;
+  font-size: 16px;
+}

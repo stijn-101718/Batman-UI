@@ -1,3 +1,5 @@
+  /* Folder */
+  
   function toonVlak() {
     const box = document.getElementById("zeghoi");
     box.style.display = "block";
@@ -33,3 +35,17 @@
     isDragging = false;
     box.style.cursor = "grab";
   });
+
+
+  /* Datum */
+
+    function updateDate() {
+      const date = new Date();
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const year = date.getFullYear();
+      document.getElementById('dateDisplay').textContent = `Date: ${day}-${month}-${year}`;
+    }
+    updateDate();
+    setInterval(updateDate, 60000);
+  
