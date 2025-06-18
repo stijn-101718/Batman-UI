@@ -4,7 +4,7 @@
     box.style.display = "block";
     box.innerHTML = `
       <span class="close-btn" onclick="verbergVlak()">×</span>
-      <div id="extraText">
+      <div id="extraText" style="color: #D32F2F;">
       <h3>incident_log_2306.txt</h3>
       <p>      [LOG ID: 2306-GCE] <br>
       Date: 18-06-2025 <br>
@@ -13,7 +13,7 @@ Time: 22:17:45<p>
       </div>
 
 
-      <div id="extraText2">
+      <div id="extraText2" style="color: #D32F2F;">
       <p>Summary: <br>
       Unregistered activity detected near ACE Chemicals. <br>
       Thermal signatures indicate 3+ individuals. <br>
@@ -58,15 +58,19 @@ Time: 22:17:45<p>
   });
 
 
-  /* Datum */
+  /* Datum en Tijd */
 
-    function updateDate() {
-      const date = new Date();
-      const day = String(date.getDate()).padStart(2, '0');
-      const month = String(date.getMonth() + 1).padStart(2, '0');
-      const year = date.getFullYear();
-      document.getElementById('dateDisplay').textContent = `Date: ${day}-${month}-${year}`;
-    }
-    updateDate();
-    setInterval(updateDate, 60000);
+  function updateDateTime() {
+    const date = new Date();
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const year = date.getFullYear();
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    const seconds = String(date.getSeconds()).padStart(2, '0');
+    const dateDisplay = document.getElementById('dateDisplay');
+    dateDisplay.innerHTML = `Date: ${day}-${month}-${year}<br>Time: ${hours}:${minutes}:${seconds}`;
+  }
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
   

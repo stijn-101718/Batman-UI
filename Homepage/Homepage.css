@@ -16,7 +16,7 @@
     }
 
 .achtergrond {
-    background-color: rgba(47, 47, 47, 0.6); 
+    background-color: rgba(25, 25, 25, 0.6); 
     width: 800px;
     height: 600px;
     position: absolute;
@@ -113,4 +113,9 @@
   text-align: right;
   color: #D32F2F;
   font-size: 16px;
+}
+
+
+#Balk2{
+  height: 5px;
 }
