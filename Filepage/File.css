@@ -1,75 +1,77 @@
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    body {
-      font-family: monospace;
-      background: black;
-      color: red;
-      --theme-red-shadow: rgba(255, 0, 0, 0.5);
-      --nav-button-bg: #611;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+body {
+  font-family: monospace;
+  background: black;
+  color: #D32F2F;
+  --theme-red-shadow: rgba(255, 0, 0, 0.5);
+}
 
-    .grid-bg {
-      background-image: linear-gradient(#333 1px, transparent 1px),
-                        linear-gradient(90deg, #333 1px, transparent 1px);
-      background-size: 40px 40px;
-      min-height: 100vh;
-      padding: 20px;
-      position: relative;
-    }
+.grid-bg {
+  background-image: linear-gradient(#333 1px, transparent 1px),
+                    linear-gradient(90deg, #333 1px, transparent 1px);
+  background-size: 40px 40px;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
 
-    .header {
-      font-size: 2rem;
-      padding-bottom: 20px;
-      color: red;
-    }
+.header {
+  font-size: 2rem;
+  padding-bottom: 20px;
+  color: #D32F2F;
+}
 
-    .search-bar {
-      margin-bottom: 20px;
-    }
+.search-bar {
+  margin-bottom: 20px;
+}
 
-    .search-bar input {
-      padding: 10px;
-      font-size: 1rem;
-      width: 300px;
-    }
+.search-bar input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 300px;
+}
 
-    .content-area {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 5px;
-    }
+.content-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  height: 50p;
+}
 
-    .text-boxes {
-      display: grid;
-      gap: 10px;
-      position: relative;
-      height: 500px;
-      overflow: hidden;
-    }
+.text-boxes {
+  display: grid;
+  gap: 10px;
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
     
-    .text-box {
-      border: 2px solid red;
-      padding: 10px;
-      color: #ccc;
-      color: #999;
-      position: absolute;
-      width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-    }
+.text-box {
+  border: 2px solid #D32F2F;
+  padding: 10px;
+  color: #ccc;
+  color: #999;
+  position: absolute;
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+}
 
-    .text-box.hidden {
-      opacity: 0;
-      transform: translateY(100%);
-    }
+.text-box.hidden {
+  opacity: 0;
+  transform: translateY(100%);
+}
 
-    .text-box.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }.case-file {
+.text-box.visible {
+   opacity: 1;
+  transform: translateY(0);
+}
+
+.case-file {
   column-count: 3;
   column-gap: 15px;
   padding: 10px;
@@ -89,22 +91,24 @@
 
 .file-box {
   display: inline-block;
-  width: 100%;
+  width: 80%;
   margin: 0 0 15px;
   background-color: rgba(0, 0, 0, 0.8);
   color: #ccc;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 16px rgba(255, 0, 0, 0.6);    
   transition: transform 1s ease, opacity 1s ease;
   cursor: pointer;
 }
-
-.file-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 24px var(--theme-red-shadow);
+.file-code {
+  font-family: monospace;
+  padding: 10px;
+  color: #ccc;
+  background-color: rgba(69, 69, 69, 0.5);
+  margin: 8px;
+  position: absolute;
 }
-
 .file-box img {
   display: block;
   width: 100%;
@@ -117,58 +121,9 @@
   width: 100%;
   height: auto;
 }
-
-
-    .case-file {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 5px;
-    }
-
-    .file-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-
-      border-radius: 10px;
-      padding: 0;
-      margin-bottom: -10px;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: #ccc;
-      box-shadow: 0 0 16px rgba(255, 0, 0, 0.6);    
-      transition: transform 1s ease, opacity 1s ease;
-      cursor: pointer;
-
-      width: fit-content;
-      height: fit-content;
-    }
-
-    .file-box img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      object-fit: contain;
-    }
-    .file-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 24px var(--theme-red-shadow);
-    }
-    .thumbnail {
-      width: 100%;
-      height: auto;
-    }
-    .nav-button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: var(--nav-button-bg); 
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
+.redacted {
+  background: red;
+  color: red;
+  letter-spacing: 2px;
+  padding: 2px 5px;
+}

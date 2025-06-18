@@ -18,4 +18,4 @@
       textBoxes[currentText].classList.add("visible");
     }
 
-    setInterval(cycleText, 3000);
+    setInterval(cycleText, 10000);
