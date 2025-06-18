@@ -69,7 +69,55 @@
     .text-box.visible {
       opacity: 1;
       transform: translateY(0);
-    }
+    }.case-file {
+  column-count: 3;
+  column-gap: 15px;
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  .case-file {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .case-file {
+    column-count: 1;
+  }
+}
+
+.file-box {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 16px rgba(255, 0, 0, 0.6);    
+  transition: transform 1s ease, opacity 1s ease;
+  cursor: pointer;
+}
+
+.file-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 24px var(--theme-red-shadow);
+}
+
+.file-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+}
+
 
     .case-file {
       display: grid;
