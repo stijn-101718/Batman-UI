@@ -74,3 +74,20 @@ Time: 22:17:45<p>
   updateDateTime();
   setInterval(updateDateTime, 1000);
   
+
+    // 1. Laat batlogo fade-in na tekst
+  setTimeout(() => {
+    document.getElementById("batlogo").style.opacity = 1;
+  }, 3200);
+
+  // 2. Verwijder bootscreen en toon main pagina
+  setTimeout(() => {
+    document.getElementById("boot-screen").style.transition = "opacity 2s ease";
+    document.getElementById("boot-screen").style.opacity = 0;
+
+    setTimeout(() => {
+      document.getElementById("boot-screen").style.display = "none";
+      // Zet scrollen weer aan (als je overflow: hidden hebt)
+      document.body.style.overflow = "auto";
+    }, 2000);
+  }, 6000);

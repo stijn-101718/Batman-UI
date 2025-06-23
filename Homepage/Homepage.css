@@ -119,3 +119,43 @@
 #Balk2{
   height: 5px;
 }
+
+
+#boot-screen {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#boot-text {
+  color: red;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid red;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+
+#batlogo {
+  margin-top: 40px;
+  opacity: 0;
+  width: 200px;
+  transition: opacity 2s ease-in;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 25ch }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: red; }
+}
