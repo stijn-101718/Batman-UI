@@ -3,7 +3,7 @@
       font-family: 'Roboto Condensed', Arial, sans-serif;
     }
 
-        /* Nav bar */
+        /* balk */
 
     #Balk{
       width: 100%;
@@ -15,6 +15,8 @@
       z-index: 1000;
     }
 
+
+            /* is de css voor de file die je opent */
 .achtergrond {
     background-color: rgba(25, 25, 25, 0.6); 
     width: 800px;
@@ -28,7 +30,7 @@
     z-index: 1000;
 }
 
-
+ /* knop om file dicht te doen */
     .close-btn {
       position: absolute;
       top: 2px;
@@ -40,7 +42,7 @@
       z-index: 10;
     }
 
-
+ /* zorgt voor links boven buttons rood en icon wit */
     #button{
       margin-top: 30px;
       width: 45px;
@@ -95,8 +97,8 @@
 
 
 
-/* mark */
 
+   /* text links onder */
 
 #Title{
   color: #D32F2F;
@@ -105,6 +107,8 @@
   bottom: 0px;
 }
 
+
+  /* Tijd en datum rechts boven */
 
 #dateDisplay {
   position: fixed;
@@ -115,11 +119,13 @@
   font-size: 16px;
 }
 
+  /* Balk onder */
 
 #Balk2{
   height: 5px;
 }
 
+  /* Loading screen */
 
 #boot-screen {
   position: fixed;
@@ -143,12 +149,6 @@
   animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
 }
 
-#batlogo {
-  margin-top: 40px;
-  opacity: 0;
-  width: 200px;
-  transition: opacity 2s ease-in;
-}
 
 @keyframes typing {
   from { width: 0 }

@@ -1,4 +1,4 @@
-  /* Folder */
+  /* Folder open met tekst */
   function toonVlak() {
     const box = document.getElementById("zeghoi");
     box.style.display = "block";
@@ -36,8 +36,12 @@ Time: 22:17:45<p>
   let isDragging = false;
   let offsetX, offsetY;
 
+   /* zorgt ervoor dat wanneer je op kruis hangt met muis beweeg je niet */
+
   box.addEventListener("mousedown", function(e) {
     if (e.target.classList.contains("close-btn")) return;
+
+      /* zorgt ervoor dat je het kan bewegen en dat wanneer je hem pakt je andere cursor krijgt */
 
     isDragging = true;
     offsetX = e.clientX - box.offsetLeft;
@@ -51,6 +55,10 @@ Time: 22:17:45<p>
       box.style.top = (e.clientY - offsetY) + "px";
     }
   });
+
+
+  
+      /* maakt curser weer normaal */
 
   document.addEventListener("mouseup", function() {
     isDragging = false;
@@ -75,19 +83,16 @@ Time: 22:17:45<p>
   setInterval(updateDateTime, 1000);
   
 
-    // 1. Laat batlogo fade-in na tekst
-  setTimeout(() => {
-    document.getElementById("batlogo").style.opacity = 1;
-  }, 3200);
 
-  // 2. Verwijder bootscreen en toon main pagina
+
+  /* Verwijderd startscherm en laat home page zien */
   setTimeout(() => {
     document.getElementById("boot-screen").style.transition = "opacity 2s ease";
     document.getElementById("boot-screen").style.opacity = 0;
 
     setTimeout(() => {
       document.getElementById("boot-screen").style.display = "none";
-      // Zet scrollen weer aan (als je overflow: hidden hebt)
+  /* zet scrollen weer aan als pagina weer normaal is */
       document.body.style.overflow = "auto";
     }, 2000);
   }, 6000);
