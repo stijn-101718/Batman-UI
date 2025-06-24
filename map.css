@@ -26,3 +26,9 @@
       padding: 20px;
       position: fixed;
     }
+    #map {
+  margin-left: 250px;
+  height: 100vh;
+  width: calc(100% - 250px);
+  filter: hue-rotate(-20deg) saturate(1.2); /* adds dark red-ish effect */
+}
