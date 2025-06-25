@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map</title>
+  <link rel="stylesheet" href="map.css">
+  <script src="map.js" defer></script>
+
+
+</head>
+
+<body>
+  <div class="grid-bg">
+    <div class="sidebar">
+      <p>In Swamp Thing #52, Alan Moore established that Gotham City was founded in 1635 by Captain Jon Logerquist.
+        Other writers have generally followed this backstory for Gotham City. According to the regular version of this
+        story, Jon Logerquist was a Swedish mercenary who served the Swedish Empire during the Thirty Years' War and
+        fought in the Battle of Nördlingen in Swabia. In order to flee the religious wars that were raging throughout
+        Europe, Logerquist and a small group of colonists decided to pursue a new life in North America, where they
+        established a settlement on the East Coast in 1635. Captain Logerquist named the territory Fort Adolphus after
+        Swedish king Gustavus Adolphus, who had died in the Battle of Lützen a few years earlier.
+        Many storylines have added more events to Gotham's history, and at the same time affecting the city and its
+        people greatly. Perhaps the greatest in impact was a long set of serial storylines, which started with Ra's Al
+        Ghul releasing a debilitating virus called the "Clench" during the "Contagion" storyline. As that arc wrapped
+        the city was beginning to recover only to suffer an earthquake described as being 7.6 on the Richter Scale in
+        "Cataclysm".<br /> <br />
+        Green - safe zone.<br /> <br />
+        Orange - Hifh risk of criminality.<br /> <br />
+        Red - crimes.<br /> <br />
+        Blue - police.
+    </div>
+
+    <div id="map">
+
+    </div>
+    <a href="../Homepage/Homepage.html" style="text-decoration: none;">
+      <button style="margin-left: 10px;" id="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16" style="color: #D32F2F;">
+          <path
+            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+        </svg></button>
+    </a>
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx6Zp9gHANg_rdj6KTtdaQHy4euarRg2Q&callback=initMap"
+    defer></script>
+</body>
+
+</html>
